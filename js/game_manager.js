@@ -4,7 +4,7 @@ function GameManager(size, InputManager, Actuator, StorageManager) {
   this.storageManager = new StorageManager;
   this.actuator       = new Actuator;
 
-  this.startTiles     = 2;
+  this.startTiles     = 16;
 
   this.inputManager.on("move", this.move.bind(this));
   this.inputManager.on("restart", this.restart.bind(this));
@@ -20,7 +20,7 @@ GameManager.prototype.restart = function () {
   this.setup();
 };
 
-// Keep playing after winning (allows going over 4096)
+// Keep playing after winning (allows going over 64)
 GameManager.prototype.keepPlaying = function () {
   this.keepPlaying = true;
   this.actuator.continueGame(); // Clear the game won/lost message
@@ -80,23 +80,23 @@ GameManager.prototype.addRandomTile = function (isStart) {
   		if(this.canMergeAlmostMax()) {
   			return;
   		}
-  		var cell2 = this.grid.availableContentCell(2);
-  		var cell4 = this.grid.availableContentCell(4);
+  		var cell2 = this.grid.availableContentCell(0.0625);
+  		var cell4 = this.grid.availableContentCell(0.125);
   		if (cell2.x === -1 && cell4.x === -1) {
   			this.addRandomTileHelper(0.5, 1);
   		} else if (cell2.x === -1) {
-  			var tile = new Tile(cell4, 4);
+  			var tile = new Tile(cell4, 0.0625);
   			this.grid.insertTile(tile);
   		} else if (cell4.x === -1) {
-  			var tile = new Tile(cell2, 2);
+  			var tile = new Tile(cell2, 0.125);
   			this.grid.insertTile(tile);
   		} else {
-  			var value = Math.random() < 0.5 ? 2 : 4;
+  			var value = Math.random() < 0.5 ? 0.0625 : 0.125;
   			if (value === 2) {
-  				var tile = new Tile(cell2, 2);
+  				var tile = new Tile(cell2, 0.0625);
   				this.grid.insertTile(tile);
   			} else {
-  				var tile = new Tile(cell4, 4);
+  				var tile = new Tile(cell4, 0.125);
   				this.grid.insertTile(tile);
   			}
   		}
@@ -186,7 +186,7 @@ var iterStep = 1;
 }
 
 GameManager.prototype.addRandomTileHelper = function (rate, t) {
-  		var value = Math.random() < rate ? 2 : 4;
+  		var value = Math.random() < rate ? 0.0625 : 0.125;
   		var tile;
   		var type = 0;
   		if (t) {
@@ -299,8 +299,8 @@ GameManager.prototype.move = function (direction) {
           // Update the score
           self.score += merged.value;
 
-          // The mighty 4096 tile
-          if (merged.value === 4096) self.won = true;
+          // The mighty 64 tile
+          if (merged.value === 64) self.won = true;
         } else {
           self.moveTile(tile, positions.farthest);
         }
