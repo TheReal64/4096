@@ -29,3 +29,8 @@ A small clone of 2048
 A small clone of 2048x5
 
 [A 6x6 version is also availiable.](https://thereal64.github.io/2048x6) You will most likely create 2048
+
+# 2048x7
+A small clone of 2048x6
+
+2048x7 is coming soon.
