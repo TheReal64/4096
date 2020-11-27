@@ -22,3 +22,11 @@ Changes and improvements are more than welcome!
 舔靴子的猫         
 逆水之寒         
 丹士米克87          
+
+# 2048x5
+A small clone of 2048
+[A 5x5 version is availiable.](thereal64.github.io/2048x5) You will more likely create 2048
+
+# 2048x6
+A small clone of 2048x5
+[A 6x6 version is also availiable.](thereal64.github.io/2048x6) You will most likely create 2048
