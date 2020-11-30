@@ -35,4 +35,14 @@ A 6x6 version is also availiable. You will most likely create 2048
 # 2048x7
 A small clone of 2048x6
 
-2048x7 is coming soon.
+A 7x7 version is also availiable. You will very much most likely create 2048
+
+2048x7 is licensed under the [GPL license.](https://github.com/TheReal64/64/LICENSE)
+
+
+# 2048x8
+A small clone of 2048x7
+
+A 8x8 version is also availiable. You will most definitely create 2048
+
+2048x8 is licensed under the [GPL license.](https://github.com/TheReal64/64/LICENSE)
