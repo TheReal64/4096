@@ -21,27 +21,27 @@ The game starts with 16 tiles. Each time you make a move, a 0.0625 or a 0.125 ti
 # 2048x5
 A small clone of 2048
 
-A 5x5 version is availiable. Can you get 8192 if you can?
+A 5x5 version is availiable. You should get approximately a 8192 tile.
 
 2048x5 is licensed under the [GPL license.](https://github.com/TheReal64/64/LICENSE)
 
 # 2048x6
 A small clone of 2048x5
 
-A 6x6 version is also availiable. Can you get 32768 if you can?
+A 6x6 version is also availiable. You should get approximately a 32768 tile.
 
 2048x6 is licensed under the [GPL license.](https://github.com/TheReal64/64/LICENSE)
 
 # 2048x7
 A small clone of 2048x6
 
-A 7x7 version is also availiable. Can you get 262144 if you can?
+A 7x7 version is also availiable. You should get approximately a 262144 tile.
 
 2048x7 is licensed under the [GPL license.](https://github.com/TheReal64/64/LICENSE)
 
 # 2048x8
 A small clone of 2048x7
 
-A 8x8 version is also availiable. Can you get 4194304 if you can?
+A 8x8 version is also availiable. You should get approximately a 4194304 tile.
 
 2048x8 is licensed under the [GPL license.](https://github.com/TheReal64/64/LICENSE)
